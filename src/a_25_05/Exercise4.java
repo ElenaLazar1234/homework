@@ -1,15 +1,34 @@
 package a_25_05;
-import java.lang.Math;
+
 import java.util.Scanner;
 public class Exercise4 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Please insert a number:");
-        int a = scanner.nextInt();
-        PalindromNumber(a);
+        int a = scanner.nextInt(); // incearca sa dai nume sugestive variabilelor
+        palindromNumberVariantaPropusaDeMine(a);
     }
 
-    public static void PalindromNumber(int a){
+    //vezi si varianta asta
+    public static void palindromNumberVariantaPropusaDeMine(int number) {
+        int temp = number;
+        int reverse = 0;
+
+        while (number > 0) {
+            int digit = number % 10;
+            reverse = (reverse * 10) + digit;
+            number /= 10;
+        }
+
+        if (temp == reverse) {
+            System.out.println("Numarul este palindrom");
+        } else {
+            System.out.println("Numarul nu este palindrom");
+        }
+
+    }
+
+    public static void palindromNumber(int a) {
         int b = a;
         int x = 0;
         int y = 0;

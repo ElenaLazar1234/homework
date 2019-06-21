@@ -8,10 +8,10 @@ public class Exercise8 {
         System.out.println("Please insert a number");
         int n = next.nextInt();
 
-        Factorial(n);
+        factorial(n);
     }
 
-    public static void Factorial(int n) {
+    public static void factorial(int n) {
         int factorial = 1;
         int x = 1;
         while (x <= n) {
